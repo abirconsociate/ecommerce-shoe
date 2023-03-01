@@ -1,0 +1,18 @@
+.adPoster {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .adPoster {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .adPoster {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

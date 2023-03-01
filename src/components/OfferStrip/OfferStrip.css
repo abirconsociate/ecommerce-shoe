@@ -1,0 +1,22 @@
+.offer-strip {
+  color: #ffffff;
+  background-color: #ff4848;
+  height: 40px;
+  background-image: linear-gradient(to right, #ff4848, rgb(219, 186, 191));
+}
+
+.offer-strip p {
+  padding-top: 10px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .offer-strip {
+    height: 35px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .offer-strip {
+    height: 35px;
+  }
+}

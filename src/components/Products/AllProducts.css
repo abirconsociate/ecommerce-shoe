@@ -1,0 +1,94 @@
+.productsView {
+  display: flex;
+  flex-direction: row;
+}
+
+.productsFilter {
+  flex-basis: 25%;
+  height: fit-content;
+  border-radius: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.productsFilter hr {
+  height: 2px;
+  color: #343434;
+}
+
+.filterByBrands {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterBySize {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.filterBySize input {
+  background-color: #ffffff;
+}
+
+.filterByOccasion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.filterByRating {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterByRating input {
+  color: grey;
+  border: none;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+.productSection {
+  flex-basis: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.productCategories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.productCategories div a {
+  text-decoration: none;
+  color: #343434;
+}
+
+.allProducts-container {
+  margin-top: 70px;
+}
+
+.multi-range-slider .bar-right,
+.bar-left {
+  box-shadow: none !important;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .allProducts-container {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .productsFilter {
+    display: none;
+  }
+
+  .allProducts-container {
+    margin-top: 50px;
+  }
+}

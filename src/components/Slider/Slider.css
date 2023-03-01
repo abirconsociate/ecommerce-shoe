@@ -1,0 +1,145 @@
+.cntr {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 800px;
+}
+
+.carsl-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 180px;
+  margin-left: 170px;
+  align-items: left;
+  width: 600px;
+}
+
+.carsl-img {
+  width: 900px;
+}
+
+.carousel-button {
+  background-color: #ff4848;
+  border-radius: 10px;
+  width: 200px;
+  color: #ffffff;
+  border: none;
+}
+
+.brandname {
+  font-weight: 600;
+  color: #ff4848;
+}
+
+.carousel-dark .carousel-indicators {
+  display: none;
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1660px) {
+  .carsl-text {
+    margin-top: 180px;
+    margin-left: 130px;
+    width: 450px;
+  }
+
+  .carsl-img {
+    width: 650px;
+  }
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+  .cntr {
+    height: 600px;
+    margin-top: 100px;
+  }
+
+  .carsl-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    align-items: left;
+    width: 400px;
+  }
+
+  .carsl-text {
+    margin-top: 70px;
+    margin-left: 100px;
+    width: 350px;
+  }
+
+  .carousel-button {
+    width: 150px;
+  }
+
+  .carsl-img {
+    width: 500px;
+  }
+
+  .brandname {
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cntr {
+    height: 500px;
+    margin-top: 150px;
+  }
+  .carsl-text {
+    margin-top: 30px;
+    margin-left: 80px;
+    width: 200px;
+  }
+
+  .product-details {
+    font-size: 10px;
+  }
+
+  .carousel-button {
+    width: 100px;
+  }
+
+  .carsl-img {
+    width: 400px;
+  }
+
+  .brandname {
+    font-weight: 600;
+  }
+  .btn-font {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .cntr {
+    height: 450px;
+    margin-top: 80px;
+  }
+  .carsl-text {
+    z-index: 5;
+    margin-top: 200px;
+    margin-left: 60px;
+    margin-right: -100px;
+    width: 400px;
+  }
+
+  .carousel-button {
+    width: 100px;
+  }
+
+  .carsl-img {
+    z-index: 1;
+    margin-left: -180px;
+    margin-top: -70px;
+    width: 500px;
+  }
+
+  .brandname {
+    font-weight: 600;
+    font-size: 23px;
+  }
+  .btn-font {
+    font-size: 12px;
+  }
+}

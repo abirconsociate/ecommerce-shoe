@@ -1,0 +1,65 @@
+.socialIcons a {
+  text-decoration: none;
+  color: gainsboro;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+  border-radius: 10px;
+  font-size: x-large;
+}
+
+p a {
+  text-decoration: none;
+}
+
+.view-in-desktoptablet {
+  display: block;
+}
+
+.view-in-mobile {
+  display: none;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .socialIcons a {
+    margin-right: 5px;
+    margin-bottom: 12px;
+    width: 30px;
+    height: 30px;
+    font-size: large;
+  }
+
+  .view-in-desktoptablet {
+    display: block;
+  }
+
+  .view-in-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .socialIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .socialIcons a {
+    margin-right: 8px;
+    margin-bottom: 9px;
+    width: 40px;
+    height: 40px;
+    font-size: x-large;
+  }
+
+  .view-in-desktoptablet {
+    display: none;
+  }
+
+  .view-in-mobile {
+    display: block;
+  }
+}

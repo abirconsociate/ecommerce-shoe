@@ -1,0 +1,212 @@
+.ttle-container {
+  clip-path: polygon(7% 0, 100% 41%, 91% 100%, 0 100%);
+}
+
+.ttle {
+  height: 100px;
+  width: 300px;
+  padding-bottom: 10px;
+  background-color: #343434;
+  color: #ffffff;
+  /* box-shadow: 10px 10px #343434; */
+}
+
+.arrBoxes {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.arrBox2 {
+  margin-top: 500px;
+}
+
+.arrImg1,
+.arrImg2 {
+  height: 700px;
+  width: 1300px;
+  z-index: 5;
+}
+
+.arrImg1 {
+  margin-right: -550px;
+  border: 3px solid gainsboro;
+  border-radius: 0 40% 0 40%;
+}
+
+.arrImg2 {
+  margin-left: -550px;
+  border: 3px solid gainsboro;
+  border-radius: 40% 0 40% 0;
+}
+
+.arrImg1 img {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0 40% 0 40%;
+}
+
+.arrImg2 img {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 40% 0 40% 0;
+}
+
+.arrInfo1,
+.arrInfo2 {
+  width: 1800px;
+  height: 240px;
+  background-color: #ffffff;
+}
+
+.arrInfo1 {
+  margin-top: 100px;
+  margin-right: -450px;
+  border-radius: 100px 0 100px 0;
+}
+
+.arrInfo2 {
+  margin-top: 400px;
+  margin-left: -450px;
+  border-radius: 0 100px 0 100px;
+}
+
+.arrInfoItems1 {
+  width: 375px;
+  height: 180px;
+  margin-left: 580px;
+}
+
+.arrInfoItems2 {
+  width: 375px;
+  height: 180px;
+  margin-left: 20px;
+}
+
+.arrInfoHeading {
+  font-weight: 500;
+  color: #ff4848;
+}
+
+.arrInfoPara {
+  font-weight: 200;
+  color: #343434;
+  font-size: 15px;
+  max-width: 300px;
+  max-height: 100px;
+}
+
+.arrBtn {
+  background-color: #ff4848;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.arrPrice1,
+.arrPrice2 {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.arrPrice1 {
+  margin-right: 40px;
+}
+
+.arrPrice2 {
+  margin-left: 40px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .arrBoxes {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .arrBox2 {
+    margin-top: 500px;
+  }
+
+  .arrImg1,
+  .arrImg2 {
+    height: 438px;
+    width: 400px;
+  }
+
+  .arrImg1 {
+    margin-right: -550px;
+    border: 3px solid gainsboro;
+    border-radius: 0 40% 0 40%;
+  }
+
+  .arrImg2 {
+    margin-left: -350px;
+    border: 3px solid gainsboro;
+    border-radius: 40% 0 40% 0;
+  }
+
+  .arrInfo1,
+  .arrInfo2 {
+    width: 400px;
+    height: 200px;
+    background-color: #ffffff;
+  }
+
+  .arrInfo1 {
+    margin-top: 100px;
+    margin-left: 430px;
+  }
+
+  .arrInfo2 {
+    margin-top: 200px;
+    margin-left: -120px;
+  }
+
+  .arrInfoItems1 {
+    width: 375px;
+    height: 180px;
+    margin-left: 100px;
+  }
+
+  .arrInfoItems2 {
+    width: 375px;
+    height: 180px;
+    margin-left: 20px;
+  }
+
+  .arrInfoHeading {
+    font-weight: 500;
+    color: #ff4848;
+  }
+
+  .arrInfoPara {
+    font-weight: 200;
+    color: #343434;
+    font-size: 15px;
+    max-width: 300px;
+    max-height: 100px;
+  }
+
+  .arrBtn {
+    padding: 10px 20px;
+  }
+
+  .arrPrice1,
+  .arrPrice2 {
+    font-weight: 400;
+    font-size: 25px;
+  }
+
+  .arrPrice1 {
+    margin-right: 40px;
+  }
+
+  .arrPrice2 {
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+}
