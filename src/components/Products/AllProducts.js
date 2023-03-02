@@ -8,7 +8,7 @@ import Loader from "../Loader/Loader";
 import { API_URL } from "../../constants/constants";
 import { BsStarFill } from "react-icons/bs";
 
-const AllProducts = () => {
+const AllProducts = (props) => {
   const [allProducts, setAllProducts] = useState([]);
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(12600);
@@ -16,26 +16,31 @@ const AllProducts = () => {
     setMinValue(e.minValue);
     setMaxValue(e.maxValue);
   };
+  // console.log(props.prop);
   const getAllProducts = async () => {
     const { data } = await axios.get(`${API_URL}api/products?limit=100`);
     const filteredProducts = data.data.filter((product) => {
       return product;
     });
     setAllProducts(filteredProducts);
+    // console.log(data.data);
   };
 
   useEffect(() => {
-    getAllProducts();
+    if (props.prop) {
+      setAllProducts(props.prop);
+
+      // console.log(props.prop);
+    } else {
+      getAllProducts();
+    }
   }, []);
 
   return (
     <>
-      <div className="allProducts-container">
-        <div className="d-flex justify-content-center ttle-container mb-5">
-          <p className="d-flex justify-content-center ttle h-2">All Products</p>
-        </div>
-        <div className="productsView ">
-          <div className="productsFilter shadow">
+      <div className="allProducts-container container-fluid">
+        <div className="productsView row pc-tablet-only">
+          <div className="productsFilter shadow col-xxl-3 col-xl-3 col-lg-3">
             <div className="px-4 pt-3">
               <p className="h3">FILTERS</p>
             </div>
@@ -287,7 +292,7 @@ const AllProducts = () => {
               </div>
             </div>
           </div>
-          <div className="productSection my-4">
+          <div className="productSection col-xxl-9 col-xl-9 col-lg-9  my-4">
             <div className="productCategories mx-5">
               <div>
                 <a href="#!" className="h2 mx-5 my-3">
@@ -308,18 +313,55 @@ const AllProducts = () => {
             {allProducts.length === 0 ? (
               <Loader />
             ) : (
-              <div className="productCards align-items-center">
+              <div className="container-fluid">
+                <div className="productCards row">
+                  {allProducts.map((product) => (
+                    <div
+                      key={product.id}
+                      className="shadow productCard col-xxl-4 col-xl-4 col-lg-4"
+                    >
+                      <Product {...product} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="productSection row mobile-tablet-only my-4">
+          <div className="productCategories col-md-12 col-sm-12 col-12">
+            <div>
+              <a href="#!" className="h6 my-3">
+                Men
+              </a>
+            </div>
+            <div>
+              <a href="#!" className="h6  my-3">
+                Women
+              </a>
+            </div>
+            <div>
+              <a href="#!" className="h6 my-3">
+                Kids
+              </a>
+            </div>
+          </div>
+          {allProducts.length === 0 ? (
+            <Loader />
+          ) : (
+            <div className="container-fluid">
+              <div className="productCards row">
                 {allProducts.map((product) => (
                   <div
                     key={product.id}
-                    className="shadow productCard mx-3 my-3"
+                    className="shadow productCard col-md-3 col-sm-6 col-12"
                   >
                     <Product {...product} />
                   </div>
                 ))}
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </>

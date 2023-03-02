@@ -30,12 +30,17 @@ const FeaturedProducts = () => {
         {featuredProducts.length === 0 ? (
           <Loader />
         ) : (
-          <div className="productCards">
-            {featuredProducts.map((product) => (
-              <div key={product.id} className="productCard-small mx-3 my-4">
-                <Product {...product} />
-              </div>
-            ))}
+          <div className="container-fluid">
+            <div className="productCards row gy-5">
+              {featuredProducts.map((product) => (
+                <div
+                  key={product.id}
+                  className="shadow productCard col-xxl-3 col-xl-3 col-lg-4 col-md-12 col-sm-6 col-12 mx-5"
+                >
+                  <Product {...product} />
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>

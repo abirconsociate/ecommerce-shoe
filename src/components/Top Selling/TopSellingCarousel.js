@@ -15,7 +15,7 @@ const TopSellingCarousel = () => {
       return product.images.length === 2;
     });
     setTopSells(filteredSlides);
-    console.log(filteredSlides);
+    // console.log(filteredSlides);
   };
 
   useEffect(() => {
@@ -69,13 +69,13 @@ const TopSellingCarousel = () => {
                 />
                 <div className="image-hover displayPcOnly">
                   <img
-                    className="d-block h-100"
+                    className="d-block w-100  h-100"
                     src={product?.images[1]?.original_image_url}
                     alt="hover slide"
                   />
                 </div>
               </div>
-              <div className="card-text">
+              <div className="card-text px-3 py-3">
                 <p className="brand-name h5 px-2 pt-2">{product.name}</p>
                 <p className="shoe-price h6 px-2 pe-2">
                   {product.formated_price}
