@@ -61,7 +61,7 @@ function NavBar() {
               <Link
                 className="h5 me-5"
                 style={{ textDecoration: "none", color: "#343434" }}
-                to="/"
+                to="/contactus"
               >
                 Contact
               </Link>
@@ -85,7 +85,12 @@ function NavBar() {
                 <Search onClick={handleVisibility} className="h3" />
               </Nav.Link>
               <Nav.Link href="#" className="me-2">
-                <Heart className="h2" />
+                <Link
+                  to="/wishlist"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Heart className="h2" />
+                </Link>
                 <span className="badge badge-warning" id="lblCartCount">
                   5
                 </span>

@@ -34,11 +34,11 @@ function SingleProduct() {
           <Loader />
         ) : (
           <div className="single-product my-5">
-            <div className="container-md row product-container">
-              <div className="d-flex col col-md-6 product-image flex-column">
+            <div className="container-fluid row product-container">
+              <div className="d-flex col col-md-6 product-image">
                 <img src={images[currentProductImage].png} alt="" />
                 <div className="thumbnail-wrapper d-flex">
-                  <div className="thumbnail">
+                  <div className="thumbnail my-2 mx-2">
                     <img
                       onClick={() => setCurrentProductImage(0)}
                       className={currentProductImage === 0 ? "active" : ""}
@@ -47,7 +47,7 @@ function SingleProduct() {
                     />
                   </div>
 
-                  <div className="thumbnail">
+                  <div className="thumbnail my-2 mx-2">
                     <img
                       onClick={() => setCurrentProductImage(1)}
                       className={currentProductImage === 1 ? "active" : ""}
@@ -56,7 +56,7 @@ function SingleProduct() {
                     />
                   </div>
 
-                  <div className="thumbnail">
+                  <div className="thumbnail my-2 mx-2">
                     <img
                       onClick={() => setCurrentProductImage(2)}
                       className={currentProductImage === 2 ? "active" : ""}
@@ -65,7 +65,7 @@ function SingleProduct() {
                     />
                   </div>
 
-                  <div className="thumbnail">
+                  <div className="thumbnail my-2 mx-2">
                     <img
                       onClick={() => setCurrentProductImage(3)}
                       className={currentProductImage === 3 ? "active" : ""}

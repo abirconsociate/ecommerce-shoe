@@ -37,7 +37,7 @@ const TopSellingCarousel = () => {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 0.56,
+      items: 0.6,
     },
   };
   return (

@@ -4,26 +4,34 @@
 } */
 
 /* 
------------------------------------------ 
-------------- Product Image ------------- 
------------------------------------------ 
-*/
-
+-----------------------------------------
+  -------------
+  Product
+  Image
+  -------------
+  -----------------------------------------
+  */
 .single-product {
   margin-top: 250px;
 }
 
+.product-image {
+  flex-direction: column;
+}
+
 .product-image img {
-  cursor: pointer;
   border-radius: 10px;
 }
 
 .thumbnail-wrapper {
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
 .thumbnail {
   border-radius: 10px;
+  border: none;
 }
 
 .thumbnail > img {
@@ -39,7 +47,6 @@
 
 .thumbnail .active {
   filter: opacity(0.35);
-  border: 1px solid black;
 }
 
 /* 

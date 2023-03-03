@@ -7,6 +7,8 @@ import Error from "./screens/Error/Error";
 import "./App.css";
 import SingleProductScreen from "./screens/SingleProductScreen/SingleProductScreen";
 import SingleCategoryScreen from "./screens/SingleCategoryScreen/SingleCategoryScreen";
+import WishlistScreen from "./screens/WishlistScreen/WishlistScreen";
+import ContactUsScreen from "./screens/ContactUsScreen/ContactUsScreen";
 import { Container } from "react-bootstrap";
 
 function Applayout() {
@@ -42,6 +44,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/categories/:id",
         element: <SingleCategoryScreen />,
+      },
+      {
+        path: "/wishlist",
+        element: <WishlistScreen />,
+      },
+      {
+        path: "/contactus",
+        element: <ContactUsScreen />,
       },
     ],
   },
