@@ -38,8 +38,8 @@ const AllProducts = (props) => {
 
   return (
     <>
-      <div className="allProducts-container container-fluid">
-        <div className="productsView row pc-tablet-only">
+      <div className="allProducts-container container-fluid pc-tablet-only">
+        <div className="productsView row">
           <div className="productsFilter shadow col-xxl-3 col-xl-3 col-lg-3">
             <div className="px-4 pt-3">
               <p className="h3">FILTERS</p>
@@ -292,8 +292,8 @@ const AllProducts = (props) => {
               </div>
             </div>
           </div>
-          <div className="productSection col-xxl-9 col-xl-9 col-lg-9  my-4">
-            <div className="productCategories mx-5">
+          <div className="productSection col-xxl-9 col-xl-9 col-lg-9">
+            <div className="productCategories">
               <div>
                 <a href="#!" className="h2 mx-5 my-3">
                   Men
@@ -314,11 +314,11 @@ const AllProducts = (props) => {
               <Loader />
             ) : (
               <div className="container-fluid">
-                <div className="productCards row">
+                <div className="productCards row gy-5">
                   {allProducts.map((product) => (
                     <div
                       key={product.id}
-                      className="shadow productCard col-xxl-4 col-xl-4 col-lg-4"
+                      className="col-xxl-4 col-xl-4 col-lg-6"
                     >
                       <Product {...product} />
                     </div>
@@ -328,7 +328,9 @@ const AllProducts = (props) => {
             )}
           </div>
         </div>
-        <div className="productSection row mobile-tablet-only my-4">
+      </div>
+      <div className="allProducts-container container-fluid mobile-tablet-only">
+        <div className="row">
           <div className="productCategories col-md-12 col-sm-12 col-12">
             <div>
               <a href="#!" className="h6 my-3">
@@ -346,23 +348,20 @@ const AllProducts = (props) => {
               </a>
             </div>
           </div>
-          {allProducts.length === 0 ? (
-            <Loader />
-          ) : (
-            <div className="container-fluid">
-              <div className="productCards row">
-                {allProducts.map((product) => (
-                  <div
-                    key={product.id}
-                    className="shadow productCard col-md-3 col-sm-6 col-12"
-                  >
-                    <Product {...product} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
+        {allProducts.length === 0 ? (
+          <Loader />
+        ) : (
+          <div className="container-fluid">
+            <div className="productCards row gy-5">
+              {allProducts.map((product) => (
+                <div key={product.id} className="col-md-4 col-sm-6 col-12">
+                  <Product {...product} />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

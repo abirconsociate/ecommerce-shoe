@@ -3,7 +3,6 @@ import { images } from "../../config/ImageData";
 import { BsPlusLg } from "react-icons/bs";
 import { BsDashLg } from "react-icons/bs";
 import { BsFillCartFill } from "react-icons/bs";
-import Lightbox from "./LightBox";
 import "./SingleProduct.css";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
@@ -12,7 +11,6 @@ import { API_URL } from "../../constants/constants";
 
 function SingleProduct() {
   const [currentProductImage, setCurrentProductImage] = useState(0);
-  const [lightbox, setLightbox] = useState(false);
   const [productQuantity, setProductQuantity] = useState(1);
   const [singleProduct, setSingleProduct] = useState([]);
 
@@ -38,11 +36,7 @@ function SingleProduct() {
           <div className="single-product my-5">
             <div className="container-md row product-container">
               <div className="d-flex col col-md-6 product-image flex-column">
-                <img
-                  onClick={() => window.innerWidth > 768 && setLightbox(true)}
-                  src={images[currentProductImage].png}
-                  alt=""
-                />
+                <img src={images[currentProductImage].png} alt="" />
                 <div className="thumbnail-wrapper d-flex">
                   <div className="thumbnail">
                     <img
@@ -80,56 +74,6 @@ function SingleProduct() {
                     />
                   </div>
                 </div>
-
-                {/* Can open lightbox on larger screen size */}
-                {window.innerWidth <= 768 && (
-                  <>
-                    <button
-                      onClick={() =>
-                        setCurrentProductImage((prevState) =>
-                          prevState === 0 ? images.length - 1 : prevState - 1
-                        )
-                      }
-                      className="lightbox-control control-prev"
-                    >
-                      <svg
-                        width="13"
-                        height="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M11 1 3 9l8 8"
-                          stroke="#1D2026"
-                          strokeWidth="3"
-                          fill="none"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                    <button
-                      onClick={() =>
-                        setCurrentProductImage((prevState) =>
-                          prevState === images.length - 1 ? 0 : prevState + 1
-                        )
-                      }
-                      className="lightbox-control control-next"
-                    >
-                      <svg
-                        width="13"
-                        height="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="m2 1 8 8-8 8"
-                          stroke="#1D2026"
-                          strokeWidth="3"
-                          fill="none"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                  </>
-                )}
               </div>
               <div className="product-description col col-md-6">
                 <p className="text-uppercase fw-700 fs-100 letter-spacing-1 clr-primary-400">
@@ -177,8 +121,6 @@ function SingleProduct() {
                 </div>
               </div>
             </div>
-
-            {lightbox && <Lightbox images={images} setLightbox={setLightbox} />}
           </div>
         )}
       </div>

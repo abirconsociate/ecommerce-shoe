@@ -7,13 +7,16 @@ import { BsArrowRight } from "react-icons/bs";
 
 const AdCards = () => {
   return (
-    <div className="adCards d-flex my-5">
-      {adCarddata.map((poster, idx) => (
-        <div className="adCard mb-3 mx-4" key={poster.id}>
+    <div className="adCards row ">
+      {adCarddata.map((poster) => (
+        <div
+          className="adCard col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4  col-12"
+          key={poster.id}
+        >
           <img
             className="adCard-img"
             src={poster.img}
-            style={{ borderRadius: "5px" }}
+            style={{ borderRadius: "10px" }}
             alt="Card cap"
           />
           <div className="card-body">

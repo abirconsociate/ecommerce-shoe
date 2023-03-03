@@ -1,5 +1,6 @@
 .productCard {
   border-radius: 10px;
+  height: 100%;
   background-color: #ffffff;
   box-shadow: 3px 3px 10px rgba(85, 85, 85, 0.5);
   transition: 1s;
@@ -28,11 +29,11 @@
   justify-content: space-between;
 }
 
-.productDesc {
+.product-desc {
   font-weight: 200;
 }
 
-.productPrice {
+.product-price {
   margin-right: 160px;
 }
 
@@ -43,31 +44,11 @@
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .productCard-small {
-    flex-basis: 46.5%;
-    height: 550px;
-    background-color: #ffffff;
-  }
-
-  .productCard {
-    flex-basis: 46.5%;
-    height: 550px;
+  .productImg {
     width: 100%;
-    background-color: #ffffff;
+    height: 60%;
   }
 }
 
 @media only screen and (max-width: 640px) {
-  .productImg {
-    height: 60%;
-  }
-
-  .productCard-small {
-    height: 400px;
-    background-color: #ffffff;
-  }
-
-  .productCard {
-    height: 400px;
-  }
 }

@@ -19,7 +19,7 @@ const Product = ({
   };
 
   return (
-    <>
+    <div className="productCard">
       <Link
         to={"/products/" + id}
         style={{ textDecoration: "none", color: "inherit" }}
@@ -55,8 +55,8 @@ const Product = ({
           </div>
         </div>
         <div className="product-infoBar">
-          <div className="product desc h6">
-            {`${description.substring(0, 80)}...`}
+          <div className="product-desc h6">
+            {`${description.substring(0, 65)}...`}
             <Link
               to={"/products/" + id}
               style={{ textDecoration: "none", color: "#ff4848" }}
@@ -64,7 +64,7 @@ const Product = ({
               read more
             </Link>
           </div>
-          <div className="productPrice h5 mt-2" style={{ color: "#ff4848" }}>
+          <div className="product-price h5 mt-2" style={{ color: "#ff4848" }}>
             {formated_price}
           </div>
         </div>
@@ -76,7 +76,7 @@ const Product = ({
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

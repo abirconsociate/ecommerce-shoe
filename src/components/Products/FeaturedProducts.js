@@ -35,7 +35,7 @@ const FeaturedProducts = () => {
               {featuredProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="shadow productCard col-xxl-3 col-xl-3 col-lg-4 col-md-12 col-sm-6 col-12 mx-5"
+                  className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12"
                 >
                   <Product {...product} />
                 </div>
