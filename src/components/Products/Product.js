@@ -19,7 +19,7 @@ const Product = ({
   };
 
   return (
-    <div className="productCard">
+    <div className="productCard pt-3">
       <Link
         to={"/products/" + id}
         style={{ textDecoration: "none", color: "inherit" }}
@@ -30,13 +30,13 @@ const Product = ({
           alt="Card cap"
         />
       </Link>
-      <div className="productDetails align-content-between py-3 px-3">
+      <div className="productDetails align-content-between pt-2 pb-3 px-3">
         <div className="brandAndFav">
           <Link
             to={"/products/" + id}
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <p className="productBrand h3 mb-2">{name}</p>
+            <p className="productBrand mb-2">{name}</p>
           </Link>
           <div className="favIcon">
             {favourite ? (
@@ -55,8 +55,8 @@ const Product = ({
           </div>
         </div>
         <div className="product-infoBar">
-          <div className="product-desc h6">
-            {`${description.substring(0, 65)}...`}
+          <div className="product-desc">
+            {`${description.substring(0, 80)}...`}
             <Link
               to={"/products/" + id}
               style={{ textDecoration: "none", color: "#ff4848" }}
@@ -64,7 +64,7 @@ const Product = ({
               read more
             </Link>
           </div>
-          <div className="product-price h5 mt-2" style={{ color: "#ff4848" }}>
+          <div className="product-price mt-2" style={{ color: "#ff4848" }}>
             {formated_price}
           </div>
         </div>

@@ -38,7 +38,16 @@ const AllProducts = (props) => {
 
   return (
     <>
-      <div className="allProducts-container container-fluid pc-tablet-only">
+      {!props ? (
+        <div className="d-flex justify-content-center ttle-container mb-5">
+          <p className="d-flex justify-content-center align-items-center h3 ttle">
+            All Products
+          </p>
+        </div>
+      ) : (
+        <div></div>
+      )}
+      <div className="allProducts-container container-fluid pc-tablet-only mx-4">
         <div className="productsView row">
           <div className="productsFilter shadow col-xxl-3 col-xl-3 col-lg-3">
             <div className="px-4 pt-3">
@@ -313,7 +322,7 @@ const AllProducts = (props) => {
             {allProducts.length === 0 ? (
               <Loader />
             ) : (
-              <div className="container-fluid">
+              <div className="container-fluid my-5">
                 <div className="productCards row gy-5">
                   {allProducts.map((product) => (
                     <div

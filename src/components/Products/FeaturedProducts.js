@@ -30,7 +30,7 @@ const FeaturedProducts = () => {
         {featuredProducts.length === 0 ? (
           <Loader />
         ) : (
-          <div className="container-fluid">
+          <div className="container-fluid mx-4">
             <div className="productCards row gy-5">
               {featuredProducts.map((product) => (
                 <div

@@ -10,8 +10,28 @@ import SingleCategoryScreen from "./screens/SingleCategoryScreen/SingleCategoryS
 import WishlistScreen from "./screens/WishlistScreen/WishlistScreen";
 import ContactUsScreen from "./screens/ContactUsScreen/ContactUsScreen";
 import { Container } from "react-bootstrap";
+// import axios from "axios";
+// import React, { useState, useEffect } from "react";
+// import { API_URL } from "./constants/constants";
+// import Loader from "./components/Loader/Loader";
 
 function Applayout() {
+  ///////////dummy login///////////////////////
+  // const [login, setLogin] = useState(false);
+
+  // const makeLogin = async () => {
+  //   const { data } = await axios.post(
+  //     `${API_URL}api/customer/login?email=ismailkarbhari91@gmail.com&password=Ismail@1234`
+  //   );
+  //   setLogin(data.message);
+  //   // console.log(data.message);
+  // };
+
+  // useEffect(() => {
+  //   makeLogin();
+  // }, []);
+  /////////////////////////////////////////////
+
   return (
     <div className="App">
       <Navbar />

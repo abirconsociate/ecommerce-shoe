@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Categories.scss";
+import "./Categories.css";
 import axios from "axios";
 import "react-multi-carousel/lib/styles.css";
 import Loader from "../Loader/Loader";
@@ -27,22 +27,32 @@ const Categories = () => {
           Categories
         </p>
       </div>
-      <div className="container" fluid>
-        <div className="row my-5">
+      <div className="container-fluid">
+        <div className="row my-5 gy-4">
           {allCategories.length === 0 ? (
             <Loader />
           ) : (
             allCategories.map((category) => (
               <div
                 key={category.id}
-                className="cat-box col-xl-3 col-lg-3 col-sm-3 col-6"
+                className="cat-box col col-xxl-3 col-xl-3 col-lg-3 col-sm-4 col-6 my-3"
               >
                 <div className="box">
-                  <Link to={"/categories/" + category.id} key={category.id}>
-                    <img src={category.image_url} alt={category.name} />
-                    <div className="box__title">
-                      <h6>{category.name}</h6>
-                      <p>Click to view prouducts</p>
+                  <Link
+                    to={"/categories/" + category.id}
+                    key={category.id}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <img
+                      className="cat-img d-block w-100 h-100"
+                      src={category.image_url}
+                      alt={category.name}
+                    />
+                    <div className="box-overlay-pc">
+                      <p className="category-title-pc">{category.name}</p>
+                    </div>
+                    <div className="box-div-mob">
+                      <p className="category-title-mob">{category.name}</p>
                     </div>
                   </Link>
                 </div>
